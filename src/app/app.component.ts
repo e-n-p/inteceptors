@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ServiceService } from './service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'interceptor';
+  singlePokemon$!: Observable<any>;
+  service = inject(ServiceService)
+  constructor () {
+    this.singlePokemon$ = this.service.getPokemonById$(25);
+  }
 }

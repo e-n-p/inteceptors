@@ -1,27 +1,17 @@
-# Interceptor
+Measure a time difference ⌛️
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+You will have to create an interceptor to display the execution time of a query. To do this, you will have to work with date formats in Javascript.
 
-## Development server
+You will need:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+     A service with a method for doing a get
+         You can use your own node server or this public API
 
-## Code scaffolding
+     A component (app.component.ts for example) which calls your service's method
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+     The interceptor that you will have written
 
-## Build
+Validation criteria ✅
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+     The console should display the target URL of the HTTP request
+     Once the server responds, the console should display the total time it took for the query to execute.
