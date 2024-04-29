@@ -12,6 +12,7 @@ export class InterceptService implements HttpInterceptor {
   constructor() { }
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     this.start = new Date().getTime();
+    console.log(req.urlWithParams);
     return next.handle(req).pipe(
       tap(res => {
         this.end =  new Date().getTime();
